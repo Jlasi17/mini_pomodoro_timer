@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 # Mini Pomodoro Timer
 
 A lightweight, visually appealing **Pomodoro timer** built with **HTML, CSS, and JavaScript**, featuring customizable sessions, focus/break timers, sound alerts, animations, and a reset button.
@@ -75,3 +77,5 @@ const TIMES = {
   break: 5 * 60, // Break duration in seconds
 };
 ```
+
+=======
