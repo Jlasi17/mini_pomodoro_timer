@@ -22,7 +22,7 @@ A lightweight, visually appealing **Pomodoro timer** built with **HTML, CSS, and
 
 ## Screenshots
 
-![Mini Pomodoro Timer](./assets/display.png)
+![Mini Pomodoro Timer](./display.png)
 
 ---
 
