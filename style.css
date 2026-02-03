@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Caveat+Brush&family=Grandstander:ital,wght@0,100..900;1,100..900&family=Holtwood+One+SC&family=Kotta+One&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Knewave", system-ui;
+  background: transparent;
+}
+
+/* MAIN CARD */
+.app {
+  width: 360px;
+  height: 360px;
+  background: url("./assets/bg.png") no-repeat center / contain;
+  padding: 24px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-app-region: drag;
+}
+
+/* TOP BAR */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* TITLE */
+#heading {
+  background: url("./assets/titlebg.png") no-repeat center / contain;
+  padding: 10px 28px;
+  color: white;
+  font-size: 18px;
+}
+
+/* SESSION DROPDOWN */
+#sessions {
+  appearance: none;
+  background: url("./assets/playbg.png") no-repeat center / contain;
+  border: none;
+  width: 48px;
+  height: 32px;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Grandstander", cursive;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* CENTER PANEL */
+.panel {
+  margin-top: 18px;
+  width: 100%;
+  height: 240px;
+
+  background-image: url("./assets/timerbg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MODE TEXT */
+#mode {
+  font-family: "Holtwood One SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+/* TIMER TEXT */
+#timer {
+  font-family: "Kotta One", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 71px;
+  color: white;
+  letter-spacing: 4px;
+  margin-bottom: 24px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+#timer.animate {
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+
+/* BUTTON CONTAINER */
+.buttons {
+  display: flex;
+  gap: 12px; /* space between buttons */
+  margin-top: 16px; /* space from timer */
+  justify-content: center;
+}
+
+#play,
+#reset {
+  background: url("./assets/playbg.png") no-repeat center / contain;
+  border: none;
+  width: 56px;
+  height: 40px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#play:hover,
+#reset:hover {
+  transform: scale(1.05);
+}
+
+#play:active,
+#reset:active {
+  transform: scale(0.95);
+}
+
+
+/* DISABLE DROPDOWN WHEN RUNNING */
+#sessions:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* MAKE BUTTONS CLICKABLE INSIDE DRAG REGION */
+#play,
+#reset,
+#sessions{
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+}
